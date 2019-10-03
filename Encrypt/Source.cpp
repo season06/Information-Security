@@ -11,7 +11,7 @@ void Caesar(string Key, string plaintext)
 	for (int i = 0; i < plaintext.size(); i++)
 	{
 		plaintext[i] += key;
-		if (plaintext[i] >= 123)
+		if (plaintext[i] >= 123)	// 超過'z', -26回到'a'~'z'
 			plaintext[i] -= 26;
 		plaintext[i] = toupper(plaintext[i]);
 	}
@@ -29,12 +29,12 @@ void Playfair(string key, string plaintext)
 	{
 		for (int j = 0; j < 5; j++)
 		{
-			if (n < key.size())
+			if (n < key.size())		// 將key放入matrix
 			{
 				vector<char>::iterator it;
 				for (it = alph.begin(); it != alph.end(); it++)
 				{
-					if (*it == key[n]) // key重複字母 跳過 (V)
+					if (*it == key[n]) // key重複字母 跳過
 					{
 						it = alph.erase(it);
 						break;
@@ -47,17 +47,14 @@ void Playfair(string key, string plaintext)
 				else
 					matrix[i][j] = key[n++];
 			}
-			else
-			{
-				//if (alph[m] == 'J') m++;  // 跳過J, i j同一格
+			else			// 將剩下的字母放入matrix
 				matrix[i][j] = alph[m++];
-			}
 		}
 	}
 	string ciphertext = "";
 	for (int i = 0; i < plaintext.size(); i++)
 	{
-		char a = plaintext[i]-32; char b = plaintext[++i]-32; //重複 插入X (插入後明文為偶數?)
+		char a = plaintext[i] - 32; char b = plaintext[++i] - 32; //重複 插入X (插入後plaintext為偶數?)
 		if (a == b)
 		{	b = 'X'; i--;	}
 		if (a == 'J') a = 'I';
@@ -85,7 +82,7 @@ void Playfair(string key, string plaintext)
 		// 轉成ciphertext
 		if (pay == pby)		 //右
 		{
-			ciphertext += matrix[(pax + 1)%5][pay]; // I/J (?)
+			ciphertext += matrix[(pax + 1)%5][pay];
 			ciphertext += matrix[(pbx + 1)%5][pby];
 		}
 		else if (pax == pbx) //下
@@ -108,9 +105,8 @@ void Vernam(string Key, string plaintext)
 	for (int i = 0; i < plaintext.size(); i++)
 	{
 		plaintext[i] = toupper(plaintext[i]);
-		key += plaintext[i];
-		
-		char temp = (plaintext[i]-65) ^ (key[i]-65);
+		key += plaintext[i];	// autokey: key + plaintext		
+		char temp = (plaintext[i] - 65) ^ (key[i] - 65);	// 變成數字做xor
 		temp += 65;
 		ciphertext += temp;
 	}
@@ -118,7 +114,7 @@ void Vernam(string Key, string plaintext)
 }
 void Row(string Key, string plaintext)
 {
-	map<int, int> key;
+	map<int, int> key; // key的數字->對應順序
 	int max = 0;
 	for (int i = 0; i < Key.size(); i++)
 	{
@@ -156,11 +152,11 @@ void Rail_fence(string Key, string plaintext)
 	fence.resize(key);
 	for (int i = 0; i < plaintext.size(); i++)
 	{
-		int len = (key * 2) - 2; //計算一圈的長度 1->2->3->2 (4)
-		int n = i % len;
-		if (n < key)
+		int len = (key * 2) - 2; // 計算一圈的長度 1->2->3->2 (4)
+		int n = i % len;	// 取餘數判斷去程還回程
+		if (n < key)	// 去程
 			fence[n].push_back(plaintext[i]);
-		else
+		else			// 回程
 			fence[len - n].push_back(plaintext[i]);
 	}
 	string ciphertext = "";
