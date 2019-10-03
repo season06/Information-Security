@@ -1,3 +1,3 @@
 ﻿# Information_Security_HW1
-Encrypt Done
+Encrypt Done \n
 Decrypt Done
