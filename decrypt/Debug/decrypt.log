@@ -1,0 +1,18 @@
+﻿  Source.cpp
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(11): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(13): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(22): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(37): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(44): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(60): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(67): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(100): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(102): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(108): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(116): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(133): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(136): warning C4018: '<=': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(158): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(161): warning C4018: '<': signed/unsigned 不相符
+c:\users\陳靜萱\source\repos\decrypt\decrypt\source.cpp(179): warning C4018: '<': signed/unsigned 不相符
+  decrypt.vcxproj -> C:\Users\陳靜萱\source\repos\decrypt\Debug\decrypt.exe
