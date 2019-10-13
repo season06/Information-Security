@@ -1,0 +1,13 @@
+﻿  Source.cpp
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(11): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(23): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(32): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(55): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(105): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(119): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(130): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(138): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(141): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(153): warning C4018: '<': signed/unsigned 不相符
+c:\users\hp ay111tx\source\repos\encrypt\encrypt\source.cpp(164): warning C4018: '<': signed/unsigned 不相符
+  Encrypt.vcxproj -> C:\Users\HP AY111TX\source\repos\Encrypt\Debug\Encrypt.exe
