@@ -135,16 +135,16 @@ vector<int> LeftShift(vector<int> k, int bit)
 	vector<int> temp(28);
 	if (bit == 1)
 	{
-		temp[0] = k[27];
-		for (int i = 1; i < 28; i++)
-			temp[i] = k[i - 1];
+		temp[27] = k[0];
+		for (int i = 0; i < 27; i++)
+			temp[i] = k[i + 1];
 	}
 	else
 	{
-		temp[0] = k[26];
-		temp[1] = k[27];
-		for (int i = 2; i < 28; i++)
-			temp[i] = k[i - 2];
+		temp[26] = k[0];
+		temp[27] = k[1];
+		for (int i = 0; i < 26; i++)
+			temp[i] = k[i + 2];
 	}
 	return temp;
 }
@@ -163,7 +163,7 @@ void generateKey(vector<int> key_64)
 	for (int n = 1; n <= 16; n++)
 	{
 		// ¥ª²¾
-		if (n == 1 || n == 4 || n == 9 || n == 16)
+		if (n == 1 || n == 2 || n == 9 || n == 16)
 		{
 			C = LeftShift(C, 1);
 			D = LeftShift(D, 1);
@@ -244,6 +244,7 @@ int main()
 			F = function(R, subkey[n]);
 			for (int i = 0; i < 32; i++)
 				R[i] = L[i] ^ F[i];
+			L = newL;
 		}
 		// ¦X¨Ö
 		for (int i = 0; i < 32; i++)
