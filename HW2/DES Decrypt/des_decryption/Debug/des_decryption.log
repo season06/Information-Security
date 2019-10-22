@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\陳靜萱\source\repos\des_decryption\des_decryption\source.cpp(102): warning C4244: '+=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+c:\users\陳靜萱\source\repos\des_decryption\des_decryption\source.cpp(223): warning C4018: '<': signed/unsigned 不相符
+  des_decryption.vcxproj -> C:\Users\陳靜萱\source\repos\des_decryption\Debug\des_decryption.exe
