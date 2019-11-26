@@ -138,9 +138,7 @@ def cool_decrypt(output_byte, key, IV):
     decrypt_image.save('./cool_decrypt.png')
 
 if __name__ == "__main__":
-    print("mode: (ECB/CBC/cool) ")
     mode = sys.argv[1]
-    print("image path: (./檔名) ")
     path = sys.argv[2]
 
     input_image = Image.open(path)
@@ -153,17 +151,20 @@ if __name__ == "__main__":
         ECB_encrypt = Image.open('./ECB_encrypt.png')
         ECB_output_byte = ECB_encrypt.convert("RGB").tobytes()
         ECB_decrypt(ECB_output_byte, key)
+        print("Done")
     elif mode == 'CBC':
         IV = os.urandom(16)
         CBC(input_byte, key, IV)
         CBC_encrypt = Image.open('./CBC_encrypt.png')
         CBC_output_byte = CBC_encrypt.convert("RGB").tobytes()
         CBC_decrypt(CBC_output_byte, key, IV)
+        print("Done")
     elif mode == 'cool':
         IV = os.urandom(16)
         cool(input_byte, key, IV)
         cool_encrypt = Image.open('./cool_encrypt.png')
         cool_output_byte = cool_encrypt.convert("RGB").tobytes()
         cool_decrypt(cool_output_byte, key, IV)
+        print("Done")
     else:
         print('mode input error!')
