@@ -215,9 +215,9 @@ vector<int> function(vector<int> R, vector<int> K)
 }
 int main(int argc, char *argv[])
 {
-	string Key = argv[1], plaintext= argv[2];
-	//string Key, plaintext;
-	//while (cin >> Key >> plaintext)
+	//string Key = argv[1], plaintext= argv[2];
+	string Key, plaintext;
+	while (cin >> Key >> plaintext)
 	{
 		vector<int>plain(64), key(64);
 		plain = ToBinary(plaintext);
