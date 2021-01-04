@@ -10,12 +10,12 @@
 
 ---
 ## HW2 - DES
-- Encryp
-Input: ./EncryptDES {key} {plaintext}
-Output: {ciphertext}
-- Decrypt
-Input: ./EncryptDES {key} {ciphertext}
-Output: {plaintext}
+- Encrypt  
+    Input: ./EncryptDES {key} {plaintext}  
+    Output: {ciphertext}  
+- Decrypt  
+    Input: ./EncryptDES {key} {ciphertext}  
+    Output: {plaintext}  
 
 ---
 ## HW3 - Block Cipher
@@ -24,14 +24,21 @@ Output: {plaintext}
 2. CBC mode
 3. Find a cool mode or design your own block cipher mode
 
-- pip install Pillow : turn jpg/png into ppm
-- pip install pycryptodome : use ARS
+- Turn jpg/png into ppm
+    ```
+    pip install Pillow
+    ```
+- Use AES
+    ```
+    pip install pycryptodome
+    ```
+
 ---
 ## HW4 - RSA
-- Encryp
-python RSA.py –e {plaintext}
-- Decrypt
-python RSA.py –d {ciphertext}
+- Encrypt  
+    python RSA.py –e {plaintext}  
+- Decrypt  
+    python RSA.py –d {ciphertext}  
 
 ---
 ## HW5 - DSA
